@@ -7,8 +7,9 @@ phases:
       - echo Logging in to Amazon ECR...
       - echo 'aws --version'
       - $(aws ecr get-login --no-include-email --region us-east-1)
-      - REPOSITORY_URI=764784637549.dkr.ecr.us-east-1.amazonaws.com/anagram
-      - IMAGE_TAG=latest      
+      - REPOSITORY_URI=093026466813.dkr.ecr.us-east-1.amazonaws.com/anagram
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}      
 
   build:
     commands:
