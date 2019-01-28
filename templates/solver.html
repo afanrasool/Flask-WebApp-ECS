@@ -1,4 +1,54 @@
-<form method="post">
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+
+.lobster {
+    font-size: 16px;
+    font-family: lobster;
+  }
+
+.aa {
+    font-size: 16px;
+    font-family: Oswald;
+    color: blue;
+  }
+
+.bodystyle{
+    font-size: 35px;
+    font-family: Open Sans;
+  }
+</style>
+<body class="w3-light-grey">
+
+
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-left w3-padding-48 ">
+    <h1 class="w3-xxxlarge lobster"><b>Anagram Solver</b></h1>
+    
+  </header>
+
+  
+
+ 
+  <div class="w3-row w3-padding w3-border w3-center bodystyle ">
+
+    
+    <form method="post">
     <div>
         <p>
                 Your anagrams are: <br>
@@ -8,7 +58,25 @@
                 {% endfor %}
         </p>
     </div>
-    <div>
+    <div class="aa">
         <a href="{{ url_for('index') }}">Another Anagram</a>
     </div>
 </form>
+
+        
+      
+
+     
+ 
+
+<!-- END w3-content -->
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
